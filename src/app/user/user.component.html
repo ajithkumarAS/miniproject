@@ -1,0 +1,12 @@
+<mat-toolbar>
+    <span> User Management </span>
+    
+    
+    <button mat-raised-button routerLink="app-userlist"><i class="fa fa-plus"></i>Add User</button>
+    <div *ngFor="let user of userData">
+      {{user}}
+    </div>
+
+   
+  </mat-toolbar>
+  <router-outlet></router-outlet>

@@ -1,0 +1,42 @@
+
+<div class="container">
+    <div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+        <h2>ACCOUNT LOGIN</h2>
+        <div class="card">
+<div class="">
+    
+    <form action="" #login="ngForm" (submit)="GetFormData(login.value)">
+        <div class="form-group">
+            <label for="name">Username</label>
+            <input type="text" name="name" id="name" class="form-control" ngModel #name="ngModel" minlength="5" required> 
+          <span class="text-danger" *ngIf="!name.valid && name.touched && name.errors?.['required']">Please enter your username </span>
+          <span class="text-danger" *ngIf="name.errors?.['minlength']">Please enter atleast 6 character </span>
+            
+            
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+                            <input type="password" name="password" id="password" class="form-control" ngModel  #password="ngModel"minlength="6" required>
+                            <span class="text-danger" *ngIf="!password.valid && password.touched && password.errors?.['required']">Please enter your password </span>
+                            <span class="text-danger" *ngIf="password.errors?.['minlength']">Please enter atleast 6 character </span>
+        </div>
+    </form>
+    <div class="checkbox">
+        <label for="agreement">
+        <input type="checkbox" name="agreement" id="agreement">
+        Remember me
+        <a href="#">Forgot Password?</a>
+    </label>
+    </div>
+    <button type="submit" class="btn btn-primary form-control" [disabled]="login.invalid" (click)="submit()" routerLink="app-dashboard">Login</button>
+    <p>Are you new?<a href="#">SignUp</a></p>
+</div>
+</div>
+
+    </div>
+    <div class="col-4"></div>
+    </div>
+
+</div>

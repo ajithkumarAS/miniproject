@@ -1,0 +1,13 @@
+span
+{
+    color: white;
+}
+button
+{
+    margin-left: 960px;
+    letter-spacing: 3px;
+}
+mat-toolbar
+{
+    background-color: blue;
+}

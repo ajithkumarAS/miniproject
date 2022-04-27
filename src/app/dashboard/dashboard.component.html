@@ -1,0 +1,58 @@
+
+<mat-sidenav-container fullscreen>
+    <mat-sidenav opened mode="side">
+       
+        <mat-nav-list style="width: 200px; background-color: darkslategrey; height: 600px;">
+            <mat-list-item>My App</mat-list-item>
+            <a href="" mat-list-item>
+                <mat-icon>dashboard</mat-icon>
+                <label>Dashboard</label>
+            </a>
+            <a href="" mat-list-item routerLink="app-shortcuts">
+                <mat-icon>link</mat-icon>
+                <label>Shortcuts</label>
+            </a>
+            <a href="" mat-list-item routerLink="app-user">
+                <mat-icon>wc</mat-icon>
+                <label>users</label>
+            </a>
+            <a href=""  mat-list-item routerLink="app-overview">
+                <mat-icon>vertical_split</mat-icon>
+                <label>Overview</label>
+            </a>
+            <a href="" mat-list-item routerLink="app-event">
+                <mat-icon>event</mat-icon>
+                <label>Event</label>
+            </a>
+            <a href="" mat-list-item routerLink="app-about">
+                <mat-icon>mood</mat-icon>
+                <label>About</label>
+            </a>
+            <a href="" mat-list-item routerLink="app-service">
+                <mat-icon>settings</mat-icon>
+                <label>Services</label>
+            </a>
+            <a href="" mat-list-item routerLink="app-contact">
+                
+                <mat-icon>phone</mat-icon>
+                <label>Contact</label>
+            </a>
+            
+
+
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar >
+            <span class="toolbar-spacer"></span>
+             Ajith 
+            </mat-toolbar> 
+          
+            
+            <router-outlet></router-outlet>
+            
+
+            
+        
+    </mat-sidenav-content>
+</mat-sidenav-container>
