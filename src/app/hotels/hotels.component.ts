@@ -8,14 +8,25 @@ import { Router } from '@angular/router';
 })
 export class HotelsComponent implements OnInit {
 
+  searchTerm:string="";
+
+  filteredArray:any=[];
+
   constructor(public routes:Router) { }
   clicked()
   {
     this.routes.navigateByUrl('app-addhotel')
   }
-  cards=[
-    {title:'ajith',content:'kumar'}
+  cards:any=[
+    {title:'ajith',content:'Vijaya park, New main road, Ch-82'},
+    {title:'iniyan',content:'Vijaya park, New main road, Ch-82'},
+    {title:'ajith',content:'Vijaya park, New main road, Ch-82'},
+    {title:'iniyan',content:'Vijaya park, New main road, Ch-82'},
+    {title:'ajith',content:'Vijaya park, New main road, Ch-82'},
+    {title:'iniyan',content:'Vijaya park, New main road, Ch-82'}
+    
   ]
+
 
   ngOnInit(): void {
       

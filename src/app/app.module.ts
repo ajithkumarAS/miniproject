@@ -22,6 +22,7 @@ import { HomeComponent } from './home/home.component';
 import { HotelsComponent } from './hotels/hotels.component';
 import { Dasboard1Component } from './dasboard1/dasboard1.component';
 import { AddhotelComponent } from './addhotel/addhotel.component';
+import { TitleFilterPipe } from './pipe/title-filter.pipe';
 
 
 
@@ -43,7 +44,8 @@ import { AddhotelComponent } from './addhotel/addhotel.component';
     HomeComponent,
     HotelsComponent,
     Dasboard1Component,
-    AddhotelComponent
+    AddhotelComponent,
+    TitleFilterPipe
   ],
   imports: [
     BrowserModule,

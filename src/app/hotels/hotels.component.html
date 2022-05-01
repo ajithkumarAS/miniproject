@@ -1,44 +1,41 @@
-
-
 <mat-toolbar style="background-color: #f25301; height: 40px;">
-    <a href="" routerLink="/app-hotels" style="color: white;">Hotel</a>
-    </mat-toolbar>
-    
-  <input type="text" placeholder="Search Hotel">
-  <button class="btn-primary" (click)="clicked()">
-      <img src="assets/images/add_hotel.png" style="padding-right: 5px; ">Add hotel</button>
-      <h3 style="font-weight: bold; margin-top: 40px; margin-left: 40px;">List of hotels</h3>
-   
-<mat-card  class="mat-elevation-z4">
-  <mat-card-header>
-    <mat-card-title>Best Western</mat-card-title>
+  <a href="" routerLink="/app-hotels" style="color: white;">Hotel</a>
+</mat-toolbar>
 
-  </mat-card-header>
-  
-  <img src="assets/images/vjiaya.jpg" alt="" srcset="" height="100px">
-  
-<mat-card-content>
-  
-</mat-card-content>
-</mat-card> <br>
-   
-<mat-card  class="mat-elevation-z4">
-  <mat-card-header>
-    <mat-card-title>Best Western</mat-card-title>
+<input type="text" placeholder="Search Hotel" [(ngModel)]="searchTerm">
+<button class="btn-primary" (click)="clicked()">
+  <img src="assets/images/add_hotel.png" style="padding-right: 5px; ">Add hotel</button>
+<h3 style="font-weight: bold; margin-top: 40px; margin-left: 40px;">List of hotels</h3>
 
-  </mat-card-header>
-  
-  <img src="assets/images/vjiaya.jpg" alt="" srcset="" height="100px">
-  
-<mat-card-content>
-  
-</mat-card-content>
-</mat-card>
+<div class="hotetlistwrapper" >
+  <div class="card" *ngFor="let name of cards | titleFilter:searchTerm">
+    <div class="header">
+      <span class="hotel-name">{{name.title}}</span>
+      <span class="edit-icon"><img src="assets/images/edit-icon.jpg"></span>
+    </div>
+    <br>
+    <div class="content-body">
+      <div class="img-section"><img src="assets/images/vjiaya.jpg" alt="" srcset="" height="80px"></div>
+      <div class="description">
+        <div>
+          <span><img src="assets/images/marker.jpg"></span>
+          <span style="padding: 2px;">{{name.content}}</span>
+        </div>
+        <div class="description-bottom">
+          <div class="rating">
+            <span><img src="assets/images/star.jpg"></span>
+            <span><img src="assets/images/star.jpg"></span>
+            <span><img src="assets/images/star.jpg"></span>
+            <span><img src="assets/images/star.jpg"></span>
+            <span><img src="assets/images/star.jpg"></span>
+          </div>
+          <div class="delete-icon"><img src="assets/images/delete-icon.jpg"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-
-   
-
-     
-      
-      
-      
+<div class="notFound" *ngIf="filteredArray.length==0">
+  <h2>Not found</h2>
+</div>
