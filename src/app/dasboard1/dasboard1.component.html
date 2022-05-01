@@ -1,0 +1,35 @@
+<mat-sidenav-container fullscreen>
+    <mat-sidenav opened mode="side">
+        <mat-nav-list style="width: 90px;background-color:#10479c; height: 100%;">
+            <mat-list>
+                <div class="img1" style="padding-left: 10px;padding-right: 10px;padding-bottom: 20px;">
+                    <img src="assets/images/expand_collapse.png" alt="" srcset="">
+                </div>
+                 <mat-divider></mat-divider>
+                 
+        
+                    <button class="btn-primary" (click)="gotoHome()" style="padding-top: 10px; padding-left: 10px; padding-right: 10px; padding-bottom: 20px;"><img src="assets/images/home_highlighted.png" alt="" srcset="" style="margin-left: 3px;">
+                        Home</button>
+                 
+                 <mat-divider></mat-divider>
+                
+                <button class="btn-accent" (click)="gotoHotel()" style="padding-top: 10px; padding-left: 10px; padding-right: 10px; padding-bottom: 20px;">
+                   <img src="assets/images/hotel_highlighted.png" alt="" srcset="" style="margin-left: 3px;"> Hotels</button>
+                <mat-divider></mat-divider>
+                 
+                
+              </mat-list>
+            </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar style="background-color:ECECEC;">
+            <span class="toolbar-spacer"></span>
+            <img src="assets/images/hotel manage.png" alt="" srcset="">
+           <h1 style="margin-left: 10px; font-weight: bold;">Hotel Management</h1>
+           
+           
+            </mat-toolbar> 
+            <router-outlet></router-outlet>
+    </mat-sidenav-content>
+
+</mat-sidenav-container>

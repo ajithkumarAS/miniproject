@@ -12,7 +12,7 @@ import { UserDetails } from '../model/user-details';
 export class UserlistComponent implements OnInit {
  
   submit=new FormGroup({
-    name:new FormControl("",Validators.required),
+    name:new FormControl("",[Validators.required,Validators.minLength(5)]),
     surname:new FormControl("",Validators.minLength(4)),
     phone:new FormControl("",Validators.required),
     address:new FormControl("",Validators.required),
@@ -24,7 +24,7 @@ export class UserlistComponent implements OnInit {
   
   getData()
   {
-   this._ser.addUser( this.submit.value)
+   //this._ser.addUser( this.submit.value)
      
   }
  get vname()
@@ -61,7 +61,7 @@ export class UserlistComponent implements OnInit {
  }
     
 
-  constructor( public _ser :ServiceService) {
+  constructor() {
  
  //  _service.addUser( new UserDetails)
 // console.log( _service.getUser(new UserDetails))

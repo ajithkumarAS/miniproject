@@ -1,0 +1,21 @@
+input[type="text"]
+{
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 70%;
+    padding: 10px;
+    height: 40px;
+
+}
+button
+{
+    padding: 5px;
+    margin-left: 10px;
+    width: 150px;
+    height: 40px;
+    
+}
+a
+{
+    text-decoration: none;
+}

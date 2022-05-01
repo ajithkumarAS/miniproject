@@ -18,6 +18,10 @@ import { UserComponent } from './user/user.component';
 import { UserlistComponent } from './userlist/userlist.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ServiceService } from './services/service.service';
+import { HomeComponent } from './home/home.component';
+import { HotelsComponent } from './hotels/hotels.component';
+import { Dasboard1Component } from './dasboard1/dasboard1.component';
+import { AddhotelComponent } from './addhotel/addhotel.component';
 
 
 
@@ -35,7 +39,11 @@ import { ServiceService } from './services/service.service';
     EventComponent,
     UserComponent,
     UserlistComponent,
-    ProfileComponent
+    ProfileComponent,
+    HomeComponent,
+    HotelsComponent,
+    Dasboard1Component,
+    AddhotelComponent
   ],
   imports: [
     BrowserModule,
