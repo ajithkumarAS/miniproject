@@ -36,6 +36,6 @@
   </div>
 </div>
 
-<div class="notFound" *ngIf="filteredArray.length==0">
+<div class="notFound" *ngIf="(cards|titleFilter:searchTerm).length==0">
   <h2>Not found</h2>
 </div>

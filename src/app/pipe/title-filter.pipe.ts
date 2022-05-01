@@ -12,7 +12,6 @@ export class TitleFilterPipe implements PipeTransform {
       return value;
     }
 
-    HomeComponent.filteredArray=value.filter((data:any)=>(data.title).toLowerCase().indexOf(filterString.toLowerCase())!==-1)
 
     return value.filter((data:any)=>(data.title).toLowerCase().indexOf(filterString.toLowerCase())!==-1)
 
